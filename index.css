@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0f1424;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.profile-card {
+  background-color: #5746ea;
+  border-radius: 15px;
+  padding: 20px;
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.profile-text h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.report {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.time-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.time-options button {
+  background: none;
+  border: none;
+  color: white;
+  opacity: 0.7;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.time-options button.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.cards-grid {
+  flex: 3 1 700px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #1C204B;
+  position: relative;
+}
+
+.card-header {
+  background-color: transparent;
+  height: 60px;
+  position: relative;
+}
+
+.card-header img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: auto;
+  object-fit: cover;
+  border-top-right-radius: 15px;
+}
+
+.card.work .card-header {
+  background-color: #FF8B64;
+}
+
+.card.play .card-header {
+  background-color: #56C2E6;
+}
+
+.card.study .card-header {
+  background-color: #FF5C7C;
+}
+
+.card.exercise .card-header {
+  background-color: #4ACF81;
+}
+
+.card.social .card-header {
+  background-color: #7536D3;
+}
+
+.card.self-care .card-header {
+  background-color: #F1C75B;
+}
+
+.card-body {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.card h3 {
+  font-size: 2.5rem;
+  margin: 15px 0 5px;
+}
+
+.card p {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
